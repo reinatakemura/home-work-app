@@ -65,3 +65,6 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
 # ユーザー管理機能の実装に、「devise」を使用
 gem 'devise'
+
+#Use jquery as the JavaScript library
+gem 'jquery-rails'
