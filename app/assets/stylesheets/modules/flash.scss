@@ -1,0 +1,20 @@
+.notification {
+  // deviseを使用すると、ログイン時などに表示させるメッセージが「flashオブジェクト」に自動で格納されます。以下はその中身。
+  // key: "alert", value: "You need to sign in or sign up before continuing. "
+  // key: "notice", value: "Welcome! You have signed up successfully. "
+  // key: "notice", value: "Signed in successfully. "
+
+  // 「通知用」のメッセージ
+  .notice {
+    background-color: $light_blue;
+    color: $white;
+    text-align: center;
+  }
+
+  // 「アラート用」メッセージ
+  .alert {
+    background-color: $alert_orange;
+    color: $white;
+    text-align: center;
+  }
+}

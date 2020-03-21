@@ -1,0 +1,31 @@
+.main-tweet
+  .main-tweet__header
+    .main-tweet__header--left
+      .main-tweet__header--left-logo
+        Homework App
+    .main-tweet__header--right
+      .main-tweet__header--right-name
+        -if user_signed_in?
+          -# ログイン中のユーザー名が表示され、クリックするとユーザー編集ページに遷移する
+          = link_to edit_user_registration_path, method: :get, class: 'main-tweet__header--edit' do
+            = current_user.name
+        -else
+          = link_to "新規登録", new_user_registration_path, method: :get, class: 'post'
+      .main-tweet__header--right-logout
+        -if user_signed_in?
+          -# ログアウト機能を実装
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+        -else
+          = link_to "ログイン", user_session_path, class: 'post'
+
+  .main-tweet__contents
+    .main-tweet__contents__content
+      = render @tweets
+
+    -if user_signed_in?
+      .main-tweet__contents__messages
+        = form_for [@tweet] do |f|
+          = f.text_area :content, class: 'main-tweet__contents__messages--text', placeholder: '文字を入力（25文字以内）'
+          = f.submit '投稿する', class: 'main-tweet__contents__messages--btn'
+    .main-tweet__footer--copyright
+      Hormwork App 2020

@@ -1,0 +1,5 @@
+.notification
+  -# each文を使うと、これらを1つずつ取り出すことができる
+  - flash.each do |key, value|
+    -# 「キー」を「CSS用のクラス名」に、「バリュー」を「表示するメッセージ本文」として使っています。
+    = content_tag :div, value, class: key

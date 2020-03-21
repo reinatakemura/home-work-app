@@ -1,0 +1,15 @@
+-# どのビューを表示するときも必ず表示されるようデフォルトで設定されているファイル
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title HomeWorkApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    -# フラッシュメッセージが表示されるようになる
+    = render 'layouts/notifications'
+    -# ビューファイルの内容をここに埋め込むため
+    = yield

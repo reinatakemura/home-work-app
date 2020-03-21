@@ -1,0 +1,8 @@
+.main-tweet__contents__content__block
+  .main-tweet__contents__content__block--text
+    = tweet.content
+  .main-tweet__contents__content__block__rightBox
+    .main-tweet__contents__content__block__rightBox--name
+      = tweet.user.name
+    .main-tweet__contents__content__block__rightBox--postDate
+      =tweet.created_at.strftime("%Y/%m/%d %H:%M")
