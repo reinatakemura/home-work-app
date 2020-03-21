@@ -49,8 +49,8 @@
   &__contents {
     width: 100%;
     height: calc(100vh - 65px) ;
-    overflow: scroll;
     &__content {
+      overflow: scroll;
       height: 300px;
       margin: 30px 250px 0;
       padding-top: 1px;
