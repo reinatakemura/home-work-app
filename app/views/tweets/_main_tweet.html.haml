@@ -23,8 +23,8 @@
       = render @tweets
 
     -if user_signed_in?
-      .main-tweet__contents__messages
-        = form_for [@tweet], html: {id: "new_tweet"} do |f|
+      .form
+        = form_for [@tweet], html: {id: "new_tweet", class: "main-tweet__contents__messages"} do |f|
           = f.text_area :content, class: 'main-tweet__contents__messages--text', placeholder: '文字を入力（25文字以内）'
           = f.submit '投稿する', class: 'main-tweet__contents__messages--btn'
     .main-tweet__footer--copyright
