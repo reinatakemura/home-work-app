@@ -48,7 +48,7 @@
   }
   &__contents {
     width: 100%;
-    height: calc(100vh - 65px) ;
+    height: calc(100% - 95px);
     &__content {
       overflow: scroll;
       height: 300px;
@@ -110,8 +110,6 @@
       }
     }
     .main-tweet__footer--copyright {
-      height: 45px;
-      line-height: 45px;
       text-align: center;
       color: #473838;
     }
