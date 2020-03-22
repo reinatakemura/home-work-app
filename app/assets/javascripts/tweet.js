@@ -29,12 +29,17 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(tweet){
-      var html = buildHTML(tweet);
+    .done(function(tweets){
+      var html = buildHTML(tweets);
       console.log(html);
       $('.main-tweet__contents__content').append(html);
       $('.main-tweet__contents__messages--text').val('');
       $('.main-tweet__contents__messages--btn').prop('disabled', false);
+      $('.main-tweet__contents__content').animate({ scrollTop: $('.main-tweet__contents__content')[0].scrollHeight});
+      }
+    )
+    .fail(function(){
+      alert('error');
     })
-  })
+  });
 });
